@@ -17,7 +17,7 @@ public class LC90SubsetsII {
     private void backtrack(int[] nums, List<List<Integer>> result, Deque<Integer> path, int start) {
         result.add(new ArrayList<>(path));
         for (int i = start; i < nums.length; i++) {
-            if (i != start && nums[i] == nums[i - 1]) continue;
+            if (i > start && nums[i] == nums[i - 1]) continue;
             path.addLast(nums[i]);
             backtrack(nums, result, path, i + 1);
             path.removeLast();

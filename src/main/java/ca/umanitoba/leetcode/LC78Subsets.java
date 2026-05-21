@@ -16,7 +16,7 @@ public class LC78Subsets {
         result.add(new ArrayList<>(path));
         for (int i = start; i < nums.length; i++) {
             path.addLast(nums[i]);
-            backtrack(nums, result, new ArrayDeque<>(), i + 1);
+            backtrack(nums, result, path, i + 1);
             path.removeLast();
         }
     }

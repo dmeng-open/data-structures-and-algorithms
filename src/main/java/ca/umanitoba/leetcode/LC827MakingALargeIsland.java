@@ -31,7 +31,7 @@ public class LC827MakingALargeIsland {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == 0) {
-                    var used = new HashSet<Integer>();
+                    var used = new HashSet<Integer>(); 
                     int area = 1;
                     for (var shift : SHIFTS) {
                         var r = i + shift[0];
